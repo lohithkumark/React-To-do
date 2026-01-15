@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at top left, #dbeafe, #fdf2f8, #ecfeff);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 55px 15px;
+  overflow-x: hidden;
+  color: #0f172a;
+}
+
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.55;
+  z-index: -1;
+}
+
+body::before {
+  background: #60a5fa;
+  top: -120px;
+  left: -120px;
+}
+
+body::after {
+  background: #fb7185;
+  bottom: -120px;
+  right: -120px;
+}
+
+
+.main {
+  width: 100%;
+  max-width: 850px;
+}
+
+/* ===== Header ===== */
+.header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.header h1 {
+  font-size: 3.1rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  background: linear-gradient(to right, #2563eb, #16a34a, #db2777);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header p {
+  font-size: 1rem;
+  margin-top: 6px;
+  color: rgba(15, 23, 42, 0.65);
+}
+
+
+.todo-box {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(16px);
+  border-radius: 22px;
+  padding: 32px;
+  box-shadow: 0px 18px 50px rgba(15, 23, 42, 0.12);
+}
+
+
+.input-box {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 30px;
+}
+
+.input-box input {
+  flex: 1;
+  padding: 16px 18px;
+  border-radius: 14px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  outline: none;
+  background: rgba(255, 255, 255, 0.85);
+  font-size: 1.05rem;
+  transition: 0.2s ease;
+}
+
+.input-box input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.18);
+}
+
+.input-box button {
+  padding: 16px 26px;
+  border: none;
+  cursor: pointer;
+  font-weight: 800;
+  border-radius: 14px;
+  font-size: 1.05rem;
+  color: white;
+  background: linear-gradient(135deg, #2563eb, #4f46e5);
+  transition: 0.25s;
+}
+
+.input-box button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 12px 35px rgba(37, 99, 235, 0.25);
+}
+
+
+.list-box h2 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-bottom: 18px;
+}
+
+
+.no-task {
+  padding: 22px;
+  text-align: center;
+  border-radius: 16px;
+  background: rgba(15, 23, 42, 0.05);
+  color: rgba(15, 23, 42, 0.5);
+  font-weight: 600;
+}
+
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  margin-bottom: 14px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0px 10px 26px rgba(15, 23, 42, 0.06);
+  transition: 0.25s;
+}
+
+.task-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 18px 35px rgba(15, 23, 42, 0.1);
+}
+
+.left-side {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.left-side input[type="checkbox"] {
+  height: 22px;
+  width: 22px;
+  cursor: pointer;
+  accent-color: #16a34a;
+}
+
+.left-side span {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+
+.strike {
+  text-decoration: line-through;
+  opacity: 0.65;
+  color: #16a34a;
+}
+
+
+.btns {
+  display: flex;
+  gap: 10px;
+}
+
+.btns button {
+  padding: 10px 16px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: 0.2s;
+}
+
+
+.editbtn {
+  background: rgba(34, 197, 94, 0.12);
+  color: #16a34a;
+}
+.editbtn:hover {
+  background: rgba(34, 197, 94, 0.2);
+}
+
+
+.savebtn {
+  background: rgba(37, 99, 235, 0.13);
+  color: #2563eb;
+}
+.savebtn:hover {
+  background: rgba(37, 99, 235, 0.22);
+}
+
+
+.delbtn {
+  background: rgba(239, 68, 68, 0.12);
+  color: #ef4444;
+}
+.delbtn:hover {
+  background: rgba(239, 68, 68, 0.2);
+}
+
+
+.edit-field {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  outline: none;
+  font-size: 1.05rem;
+  background: white;
+}
+
+.edit-field:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+}
+
+
+@media (max-width: 650px) {
+  .input-box {
+    flex-direction: column;
+  }
+
+  .input-box button {
+    width: 100%;
+  }
+
+  .task-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .btns {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
